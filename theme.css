@@ -1,0 +1,37 @@
+/* Night-sky gradient background and glassy cards */
+html, body, .stApp {
+  height: 100%;
+  background: linear-gradient(180deg, #0C0E17 0%, #241E4E 100%) !important;
+  color: #EAE8E3;
+}
+
+.hero h1 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #EAE8E3;
+}
+.hero p {
+  margin-top: 0;
+  color: #9C9AA6;
+}
+
+.card, .history {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  margin: 0.75rem 0;
+  backdrop-filter: blur(4px);
+}
+
+.stButton>button {
+  background: #9C8CF2;
+  color: #0C0E17;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 0 0 rgba(156,140,242, 0.0);
+  transition: box-shadow 200ms ease;
+}
+.stButton>button:hover {
+  box-shadow: 0 0 24px rgba(156,140,242, 0.35);
+}
