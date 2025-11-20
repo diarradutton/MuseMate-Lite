@@ -1,49 +1,138 @@
-# MuseMate Lite - AI Daily Spark (Fellowship Edition)
+📘 MuseMate Lite — AI Daily Spark
 
-A night-sky themed, chat-style web app that turns your mood and intent into a warm **Spark** (clarity prompt) and **Focus** (one micro-action). It is a tiny slice of the larger MuseMate vision: daily sparks, reminders, and supportive coaching.
+MuseMate Lite is a tiny AI-powered productivity companion designed to help users start their day with clarity, intention, and emotional grounding.
 
-## Quick start (local)
+It delivers one personalized “Daily Spark” and one simple micro-action, tailored to your mood and goal for the day.
 
-```bash
+Built for speed, simplicity, and warmth — MuseMate Lite is a small slice of the full MuseMate product vision.
+
+🌐 Live Demo
+
+🔗 https://musemate-litediarradutton.streamlit.app
+
+🎯 What MuseMate Lite Does
+
+MuseMate Lite asks two simple questions:
+
+How are you feeling today?
+
+What do you want — Create, Plan, Move, or Reflect?
+
+Then it generates:
+
+✨ A personalized Spark
+
+A 1–2 sentence, gentle nudge that meets the user where they are emotionally.
+
+🎯 A Focus micro-task
+
+A tiny, achievable action that keeps users moving toward clarity or progress.
+
+🎭 Multiple AI Tones
+
+Users can choose the feel of their guidance:
+
+Warm Big Sis
+
+Therapist-Gentle
+
+Direct-but-Loving
+
+
+🧠 How AI Is Used
+
+MuseMate Lite uses an OpenAI GPT model to:
+
+Understand emotional context
+
+Interpret the user’s intent (Create / Plan / Move / Reflect)
+
+Adapt tone and guidance style
+
+Produce empathetic, human-feeling micro advice
+
+Maintain short-term session memory
+
+Generate shareable PNG cards
+
+All prompts are carefully structured for warmth, clarity, and emotional intelligence.
+
+🏗️ Tech Stack
+
+Python 3.9+
+
+Streamlit (UI, session state, deployment)
+
+OpenAI API (AI generation)
+
+Pillow (PNG export)
+
+httpx (networking)
+
+GitHub + Streamlit Cloud (hosting)
+
+📁 Project Structure
+musemate-lite/
+│
+├── app.py                # Main Streamlit app
+├── core/
+│   ├── ai.py             # AI client + inference logic
+│   ├── prompts.py        # Tone prompts + system prompt
+│   └── render.py         # Display logic + PNG generation
+│
+├── theme.css             # UI theme override
+├── requirements.txt      # Dependencies
+├── .streamlit/
+│   └── config.toml       # Theme + settings
+│
+└── README.md             # You are here
+
+🚀 Run Locally
+1. Clone the repo
+git clone https://github.com/diarradutton/MuseMate-Lite.git
+cd MuseMate-Lite
+
+2. Create a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+3. Install dependencies
 pip install -r requirements.txt
-# set your OpenAI key
-export OPENAI_API_KEY="sk-..."
-streamlit run app.py
-```
 
-## Deploy on Streamlit Cloud (recommended)
+4. Add your OpenAI key
+Create .streamlit/secrets.toml:
+OPENAI_API_KEY = "your-key-here"
 
-1. Push this folder to a new GitHub repo (e.g., `musemate-lite`).
-2. Go to share.streamlit.io and select your repo.
-3. In App Settings -> Secrets, add:
-```
-OPENAI_API_KEY = "sk-..."
-```
-4. Deploy. Your app will have a public URL to share.
+5. Run the app
+python3 -m streamlit run app.py
 
-## Deploy on Hugging Face Spaces (alternative)
+🔮 Future Vision (Full MuseMate)
 
-1. Create a Space using the Streamlit template.
-2. Upload these files.
-3. In the Space's Variables and secrets, add `OPENAI_API_KEY`.
-4. Deploy.
+MuseMate Lite is just the beginning.
+The full MuseMate will include:
 
-## Tests and quality checks
+Habit tracking
 
-```bash
-pytest -q
-pre-commit install
-pre-commit run --all-files
-```
+Daily reflections & journaling
 
-## What to show in the fellowship application
+Creative challenges
 
-- Live App: <your URL>
-- Demo Video: <your Loom link>
-- Code/Case Study: <your GitHub repo>
+Mood insights & mini dashboards
 
-## Notes
+Streaks + gentle accountability
 
-- If the API errors or you have no key set, the app returns a graceful fallback Spark/Focus so the UI never breaks.
-- The PNG download is generated locally with Pillow for easy sharing.
-- Colors: deep navy to violet gradient, lavender accent, warm beige text.
+Multi-language support
+
+iOS + Android versions
+
+Theme personalization (Dark/Light/Soft Blush)
+
+Subscription tiers: Free daily spark vs unlimited access
+
+MuseMate aims to fuse AI coaching + emotional support + productivity into one warm, simple experience.
+
+🧑‍💻 Built By
+
+Diarra Dutton
+AI Builder • Product Thinker • Future Cybersecurity + AI Engineer
+2025 Block Fellowship Applicant
